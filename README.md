@@ -1,0 +1,2 @@
+# .dotfile
+my linux enviroment
