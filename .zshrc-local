@@ -1,0 +1,14 @@
+export TERM="tmux-256color"
+
+
+
+
+
+
+# alias config set
+alias viconf="nvim ~/.config/nvim/init.vim"
+alias zshrc="nvim ~/.zshrc-local"
+alias vi="nvim"
+alias vidir="cd ~/.config/nvim"
+# export Golang environment
+export PATH=$PATH:/usr/local/go/bin
