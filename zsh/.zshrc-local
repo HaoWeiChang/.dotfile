@@ -1,14 +1,21 @@
-export TERM="tmux-256color"
-
-
+# export TERM="tmux-256color"
+VIM="nvim"
 
 
 
 
 # alias config set
-alias viconf="nvim ~/.config/nvim/init.vim"
-alias zshrc="nvim ~/.zshrc-local"
-alias vi="nvim"
+alias viconf="$VIM ~/.config/nvim/init.vim"
+alias zshrc="$VIM ~/.zshrc-local"
+alias vi="$VIM"
 alias vidir="cd ~/.config/nvim"
 # export Golang environment
-export PATH=$PATH:/usr/local/go/bin
+export GOBIN="$HOME/go/bin"
+export GOPATH="$HOME/go"
+export PATH=$PATH:$GOPATH/bin
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+
+bindkey -s ^f "tmux-sessionizer\n"
