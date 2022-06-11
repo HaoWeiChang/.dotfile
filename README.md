@@ -1,2 +1,2 @@
 # .dotfile
-my linux enviroment
+Let's Setup NeoVim
