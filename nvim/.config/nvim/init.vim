@@ -19,6 +19,10 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
 
+" For luasnip users.
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+
 
 " Setup telescope
 Plug 'nvim-lua/plenary.nvim'
@@ -29,26 +33,15 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 
-
-" For luasnip users.
-Plug 'L3MON4D3/LuaSnip'
-Plug 'saadparwaiz1/cmp_luasnip'
-
-
-
 " Setup language
+Plug 'gruvbox-community/gruvbox'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 
 call plug#end()
 
 lua require('haoweichang')
-
 let mapleader = " " 
-inoremap {<CR> {<CR>}<esc>ko
-inoremap {{ {}<esc>i
-inoremap (( ()<esc>i
-inoremap "" ""<esc>i
-
 nnoremap <leader>ee oif err != nil {<CR>return nil, err<CR>}<esc>kkI<esc>
 
 
