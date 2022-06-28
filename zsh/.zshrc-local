@@ -10,8 +10,10 @@ alias zshrc="$VIM ~/.zshrc-local"
 alias vi="$VIM"
 alias vidir="cd ~/.config/nvim"
 # export Golang environment
-export GOPATH="$HOME/go"
-export PATH=$PATH:$GOPATH/bin
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$HOME/personal/lua-language-server/bin/
 export PATH=$HOME/.local/bin:$PATH
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
