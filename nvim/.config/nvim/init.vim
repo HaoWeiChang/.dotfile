@@ -37,7 +37,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'gruvbox-community/gruvbox'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+Plug 'TimUntersberger/neogit'
 
+  
 call plug#end()
 
 lua require('haoweichang')
