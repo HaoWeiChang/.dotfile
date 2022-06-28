@@ -1,4 +1,3 @@
-local capabilities = vim.lsp.protocol.make_client_capabilities()
 local cmp = require'cmp'
 
 cmp.setup({
@@ -53,7 +52,7 @@ require("lspconfig").gopls.setup(config({
 	},
 }))
 
-require("lspconfig").pyright.setup(config{})
+require("lspconfig").pylsp.setup(config{})
 
 require("lspconfig").sumneko_lua.setup(config({
 	settings = {
