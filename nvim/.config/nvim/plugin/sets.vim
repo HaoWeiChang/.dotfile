@@ -15,6 +15,5 @@ set updatetime=750
 
 " Setup Statusline
 set laststatus=2
-set statusline=
-set statusline=%f
+set statusline=\PATH:\ %r%F\ \ \ \ \LINE:\ %l/%L/%P\ TIME:\ %{strftime('%c')}
 
