@@ -2,14 +2,8 @@
 export XDG_CONFIG_HOME=$HOME/.config
 VIM="nvim"
 
-
-
-
 # alias config set
-alias viconf="$VIM ~/.config/nvim/init.vim"
-alias zshrc="$VIM ~/.zshrc-local"
 alias vi="$VIM"
-alias vidir="cd ~/.config/nvim"
 # export Golang environment
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
