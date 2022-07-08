@@ -36,3 +36,4 @@ nnoremap <leader>ee oif err != nil {<CR>return nil, err<CR>}<esc>kkI<esc>
 
 
 
+nnoremap <leader>vp :Ex<CR>
