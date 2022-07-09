@@ -1,10 +1,9 @@
 stow_dirs = $(wildcard */)
 
-UBUNTU := sudo apt install
-
 NODE_PKGS := neovim 
 
-PACKAGES := zsh tmux git curl stow fzf htop ripgrep fd-find
+UBUNTU := sudo apt install
+PACKAGES := zsh tmux git curl stow fzf htop ripgrep fd-find xclip
 
 BASE_PKGS := gcc 
 
@@ -14,6 +13,14 @@ stow:
 pkgsinstall:
 	$(UBUNTU) $(PACKAGES)
 
-test:
-	echo $(stow_dirs)
-	echo $(HOME)
+nodeinstall:
+	curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+	echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+	sudo apt update && sudo apt install --no-install-recommends yarn
+	for pkgs in $(NODE_PKGS);do yarn global add $$pkgs; done
+
+rust:
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh	
+
+tree-sitter:
+	cargo install tree-sitter
