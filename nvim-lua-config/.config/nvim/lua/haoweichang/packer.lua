@@ -1,4 +1,4 @@
-return require("packer").startup(function(use)
+require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("neovim/nvim-lspconfig")
 	use("hrsh7th/cmp-nvim-lsp")
@@ -16,14 +16,14 @@ return require("packer").startup(function(use)
 
 
 	-- Setup treesitter
-	use("nvim-treesitter",{
+	use("nvim-treesitter/nvim-treesitter",{
 		run = ":TSUpdate"
 	})
 
 
 	-- Setup language
 	use("gruvbox-community/gruvbox")
-	use("faith/vim-go",{
+	use("fatih/vim-go",{
 		run = ":GoUpdateBinaries"
 	})
 
