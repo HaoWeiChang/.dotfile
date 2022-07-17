@@ -1,5 +1,0 @@
-local Maps = require("haoweichang.keymap")
-local nnoremap = Maps.nnoremap
-
-
-nnoremap("vp", ":Ex<cr>")
