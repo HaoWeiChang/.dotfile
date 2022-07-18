@@ -62,12 +62,22 @@ require("lspconfig").sumneko_lua.setup(config({
 		  },
 		  diagnostics = {
 			globals = {'vim'},
+			neededFileStatus = {
+				["codestyle-check"] = "Any",
+			},
 		  },
 		  workspace = {
 			library = vim.api.nvim_get_runtime_file("", true),
 		  },
 		  telemetry = {
 			enable = false,
+		  },
+		  format = {
+			  enable = true,
+			  defaultConfig = {
+				  indent_style = "tab",
+				  indent_size = "4",
+			  },
 		  },
 		},
 	  },

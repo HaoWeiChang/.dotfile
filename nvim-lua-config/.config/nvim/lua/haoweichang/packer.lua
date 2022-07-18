@@ -16,14 +16,15 @@ require("packer").startup(function(use)
 
 
 	-- Setup treesitter
-	use("nvim-treesitter/nvim-treesitter",{
+	use("nvim-treesitter/nvim-treesitter", {
 		run = ":TSUpdate"
 	})
 
 
 	-- Setup language
-	use("gruvbox-community/gruvbox")
-	use("fatih/vim-go",{
+--	use("gruvbox-community/gruvbox")
+	use("ellisonleao/gruvbox.nvim")
+	use("fatih/vim-go", {
 		run = ":GoUpdateBinaries"
 	})
 

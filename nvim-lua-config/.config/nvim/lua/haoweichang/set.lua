@@ -6,10 +6,10 @@ vim.opt.hidden = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
-vim.opt.backup = true
-vim.opt.title      = true
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.title = true
 vim.opt.cursorline = true
 vim.opt.cmdheight = 1
-vim.opt.updatetime = 750
-
+vim.opt.updatetime = 500
 vim.g.mapleader = " "

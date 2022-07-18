@@ -1,3 +1,6 @@
 local neogit = require('neogit')
-neogit.setup {}
+local nnoremap = require('haoweichang.keymap').nnoremap
 
+neogit.setup {}
+nnoremap("<leader>go", ":lua require('neogit').open()<cr>")
+nnoremap("<leader>gf", "!git fetch --all<cr>")

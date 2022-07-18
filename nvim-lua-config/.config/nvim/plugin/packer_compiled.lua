@@ -112,7 +112,7 @@ _G.packer_plugins = {
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/haowei/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
-    url = "https://github.com/nvim-treesitter"
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -132,7 +132,7 @@ _G.packer_plugins = {
   ["vim-go"] = {
     loaded = true,
     path = "/home/haowei/.local/share/nvim/site/pack/packer/start/vim-go",
-    url = "https://github.com/faith/vim-go"
+    url = "https://github.com/fatih/vim-go"
   }
 }
 
