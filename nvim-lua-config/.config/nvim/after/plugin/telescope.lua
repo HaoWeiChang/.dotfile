@@ -1,22 +1,13 @@
 local Map = require("haoweichang.keymap")
 local nnoremap = Map.nnoremap
 
-nnoremap("<leader>ff", ":lua require('telescope.builtin').find_files()<cr>")
-nnoremap("<leader>fg", ":lua require('telescope.builtin').live_grep()<cr>")
-nnoremap("<leader>fb", ":lua require('telescope.builtin').buffers()<cr>")
-nnoremap("<leader>fh", ":lua require('telescope.builtin').help_tags()<cr>")
-nnoremap("<leader>fd", ":lua require('haoweichang.telescope').show_dotfiles()<cr>")
-
-
-
-
-
+nnoremap("<leader>ff", function () require('telescope.builtin').find_files() end)
+nnoremap("<leader>fg", function () require('telescope.builtin').live_grep() end)
+nnoremap("<leader>fb", function () require('telescope.builtin').buffers() end)
+nnoremap("<leader>fh", function () require('telescope.builtin').help_tags() end)
+nnoremap("<leader>fd", function () require('haoweichang.telescope').show_dotfiles() end)
 
 
 -- git telescope
-nnoremap("<C-P>", function ()
-	require('telescope.builtin').git_branches()
-end)
-nnoremap("<leader>fv", function ()
-	require('telescope.builtin').git_files()
-end)
+nnoremap("<C-P>", function () require('telescope.builtin').git_branches() end)
+nnoremap("<leader>fv", function () require('telescope.builtin').git_files() end)
