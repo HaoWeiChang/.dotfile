@@ -3,7 +3,7 @@ require("telescope").setup({
 		file_sorter = require("telescope.sorters").get_fzy_sorter,
 		prompt_prefix = " >>",
 		color_devicons = true,
-
+		path_display = { "truncate" },
 		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
 		grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
 		qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
@@ -12,16 +12,17 @@ require("telescope").setup({
 						["<C-x>"] = false,
 				},
 		},
+		file_ignore_patterns = { "node_modules", ".git", },
 	},
 })
 
 local M = {}
 
 M.show_dotfiles = function ()
-	require("telescope.builtin").find_files{
+	require("telescope.builtin").find_files {
 		cwd = '~/.dotfiles',
+		color = false,
 		hidden = true,
-		previewer = false
 	}
 end
 
