@@ -22,8 +22,3 @@ vim.opt.cursorline = true
 vim.opt.hlsearch = false
 vim.opt.cmdheight = 1
 vim.opt.updatetime = 500
-
-
-
-
-vim.g.mapleader = " "
