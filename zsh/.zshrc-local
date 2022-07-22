@@ -20,14 +20,18 @@ export NVM_DIR=$HOME/.config/nvm
 
 
 git_commit() {
-    if [[ $# -eq 1 ]] then
-        text=$1
+    if [[ $# -gt 1 ]] then
+        echo "u just need input command"
     else
-        text="no command just want push"
+        if [[ $# -eq 1 ]] then
+            text=$1
+        else
+            text="no command just want push"
+        fi
+        pushd ~/.dotfiles/
+        git add .
+        git commit -m $text
+        git push
+        popd
     fi
-    pushd ~/.dotfiles/
-    git add .
-    git commit -m $text
-    git push
-    popd
 }
