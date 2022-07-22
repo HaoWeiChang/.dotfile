@@ -18,3 +18,16 @@ export NVM_DIR=$HOME/.config/nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
+git_commit() {
+    if [[ $# -eq 1 ]] then
+        text=$1
+    else
+        text="no command just want push"
+    fi
+    pushd ~/.dotfiles/
+    git add .
+    git commit -m $text
+    git push
+    popd
+}
