@@ -5,7 +5,8 @@ local lspconfig = require("lspconfig")
 
 local update_capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local custom_attach = function(client, _)
+local custom_attach = function(client, bufnr)
+    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
     nnoremap("gd", ":lua vim.lsp.buf.definition()<CR>")
     nnoremap("K", ":lua vim.lsp.buf.hover()<CR>")
     nnoremap("<leader>vws", ":lua vim.lsp.buf.workspace_symbol()<CR>")
@@ -30,6 +31,9 @@ local function config(_config)
     return vim.tbl_deep_extend("force", {
         capabilities = update_capabilities,
         on_attach = custom_attach,
+        flags = {
+            debounce_text_changes = 150,
+        },
     }, _config or {})
 end
 
