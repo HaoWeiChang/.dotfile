@@ -17,7 +17,7 @@ vim.opt.writebackup = false
 vim.opt.title = true
 vim.opt.cursorline = true
 
-
+vim.opt.laststatus = 3
 
 vim.opt.hlsearch = false
 vim.opt.cmdheight = 1
