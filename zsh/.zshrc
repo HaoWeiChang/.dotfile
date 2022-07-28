@@ -93,8 +93,49 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.zshrc-local
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias luamake=/home/haowei/Downloads/lua-language-server/3rd/luamake/luamake
+
+# export TERM="tmux-256color"
+export XDG_CONFIG_HOME=$HOME/.config
+
+# alias config set
+alias vi="nvim"
+# export Golang environment
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$HOME/personal/lua-language-server/bin/
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$PATH:$HOME/.yarn/bin
+
+# bun
+export BUN_INSTALL="/home/haowei/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+bindkey -s ^f "tmux-sessionizer\n"
+
+
+export NVM_DIR=$HOME/.config/nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+
+git_commit() {
+    if [[ $# -gt 1 ]] then
+        echo "u just need input command"
+    else
+        if [[ $# -eq 1 ]] then
+            text=$1
+        else
+            text="no command just want push"
+        fi
+        pushd ~/.dotfiles/
+        git add .
+        git commit -m $text
+        git push
+        popd
+    fi
+}
