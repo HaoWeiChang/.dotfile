@@ -18,7 +18,7 @@ local function filekeymap()
         print(true)
         inoremap("[[", "[]<ESC>i")
         inoremap("((", "()<ESC>i")
-        inoremap("{{", "{{<ESC>i")
+        inoremap("{{", "{}<ESC>i")
     end
 end
 
