@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="afowler"
 
 plugins=(git)
 
@@ -13,6 +13,7 @@ source $ZSH/oh-my-zsh.sh
 # alias config set
 alias vi="nvim"
 alias luamake=/home/haowei/Downloads/lua-language-server/3rd/luamake/luamake
+alias haowei-server="ssh hwcode@192.168.0.10"
 
 # export TERM="tmux-256color"
 export XDG_CONFIG_HOME=$HOME/.config

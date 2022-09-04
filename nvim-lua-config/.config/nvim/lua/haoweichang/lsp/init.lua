@@ -83,3 +83,5 @@ lspconfig.sumneko_lua.setup(config({
         },
     },
 }))
+
+lspconfig.csharp_ls.setup(config {})
