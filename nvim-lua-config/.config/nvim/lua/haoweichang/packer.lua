@@ -21,9 +21,11 @@ require("packer").startup(function(use)
         run = ":TSUpdate"
     })
 
+    -- Setup Theme
+    use("ellisonleao/gruvbox.nvim")
+    use("folke/tokyonight.nvim")
 
     -- Setup language
-    use("ellisonleao/gruvbox.nvim")
     use("fatih/vim-go", {
         run = ":GoUpdateBinaries"
     })
